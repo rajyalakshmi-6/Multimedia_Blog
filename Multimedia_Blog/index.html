@@ -4,15 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Multimedia Blog</title>
-    <link rel="icon" href="/day_02/logo.png" />
+    <link rel="icon" href="/Multimedia_Blog/logo.png" />
+    <link rel="stylesheet" href="style.css" />
   </head>
+  
   <body>
     <h1>WELCOME TO MY MULTIMEDIA BLOG</h1>
     <h2>My all time Favoutite Songs 💗</h2>
     <h3>song 1 🎵</h3>
-    <audio src="/day_02/assets/song1.mp4.mp3" controls></audio>
+    <audio src="/Multimedia_Blog/assets/song1.mp4.mp3" controls></audio>
     <h3>song 2 🎵</h3>
-    <audio src="/day_02/assets/SONG3.mp3" controls></audio>
+    <audio src="/Multimedia_Blog/assets/SONG3.mp3" controls></audio>
+    <h3>song 3 🎵</h3>
+    <audio src="/Multimedia_Blog/assets/SONG2.mp3" controls></audio>
     <h2>
       TOLLYWOOD BLOCKBUSTER <mark>Indian</mark> Movie <del>Trailers</del> on
       youtube
@@ -45,7 +49,7 @@
       referrerpolicy="strict-origin-when-cross-origin"
       allowfullscreen
     ></iframe>
-</iframe>
+
 <a href="https://www.youtube.com/watch?v=NrnyxMdIOpU" target="_blank">
   Watch the Video Here
 </a>
@@ -63,13 +67,13 @@
       painful conflicts, making the film deeply relatable and raw.
     </p>
     <h3>
-      1.🎥<ins
+      2.🎥<ins
         >🔥<abbr title="KOLAR GOLD FIELDS"> KGF</abbr>: Chapter 1 (2018)</ins
       >
       > Rise of a Monster
     </h3>
     <img
-      src="/day_02/assets/thumbnail2.jpg"
+      src="/Multimedia_Blog/assets/thumbnail2.jpg"
       height="300px"
       width="400px"
       alt="image not found"
@@ -78,7 +82,7 @@
       height="300px"
       width="550px"
       poster="https://tse4.mm.bing.net/th/id/OIP.mldBC-sRIYAr38O2zSNCTgHaEK?pid=Api&P=0&h=180 "
-      src="/day_02/assets/trailer2.mp4"
+      src="/Multimedia_Blog/assets/trailer2.mp4"
       controls
     ></video>
     <p>
@@ -93,7 +97,7 @@
       >
     </p>
     <h3>
-      1.🎥<ins>Maharshi (2019)</ins> – A Message-Oriented Film About Farmers and
+      3.🎥<ins>Maharshi (2019)</ins> – A Message-Oriented Film About Farmers and
       Responsibility
     </h3>
     <span>
@@ -105,7 +109,7 @@
     /></span>
     <p>click image to play</p>
     <a height="300px"
-      width="250px" allow fullscreen href="https://youtu.be/vhh8pT_Ivkg?si=WpTUucU8cg_GNxTv">
+      width="250px" allow fullscreen href="https://youtu.be/vhh8pT_Ivkg?si=WpTUucU8cg_GNxTv" target="_blank">
   <img height="250px" controls playbutton 
       width="500px" src="https://c8.alamy.com/comp/T9231W/maharshi-indian-poster-in-telugu-and-english-top-mahesh-babu-2019-great-indian-films-usa-courtesy-everett-collection-T9231W.jpg" alt="">
 </a>
@@ -120,5 +124,23 @@
       beautifully blends commercial cinema with a strong social message about
       agriculture, village development, and giving back to society.
     </p>
+      <script>
+    const audios = document.querySelectorAll("audio");
+
+    audios.forEach(audio => {
+      audio.addEventListener("play", () => {
+
+        audios.forEach(otherAudio => {
+
+          if (otherAudio !== audio) {
+            otherAudio.pause();
+          }
+
+        });
+
+      });
+    });
+  </script>
+
   </body>
 </html>
